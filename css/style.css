@@ -12,6 +12,11 @@
   background-color: #402929;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
   padding-top: 1%; }
+  .mainframe [class^="main"] {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.82);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1%; }
   .mainframe__imageframe {
     width: 75%;
     height: 55%;
@@ -24,14 +29,34 @@
       width: 100%;
       height: 100%; }
   .mainframe .containerButtons {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     margin-top: 10%;
-    background-color: red;
+    background-color: #402929;
     width: 60%;
     height: 20%; }
     .mainframe .containerButtons__row {
       margin: 0 auto;
-      height: 100%; }
-      .mainframe .containerButtons__row--colbutton {
-        display: block;
-        background-color: blue;
-        width: calc((100% - 10px) / 2); }
+      height: 100%;
+      width: 100%;
+      text-align: center; }
+      .mainframe .containerButtons__row--col {
+        margin-top: 10%;
+        width: calc((100% - 30px) / 2);
+        float: left;
+        margin-left: 10px; }
+        .mainframe .containerButtons__row--col button {
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.82);
+          width: 4rem;
+          height: 3rem;
+          border-radius: 10px;
+          background-color: gold;
+          transition: all .3s; }
+          .mainframe .containerButtons__row--col button:hover {
+            transform: translateY(-2px);
+            background-color: crimson; }
+          .mainframe .containerButtons__row--col button:focus {
+            transform: translateY(-2px);
+            background-color: blue; }
+        .mainframe .containerButtons__row--col img {
+          width: 43%;
+          height: 53%; }

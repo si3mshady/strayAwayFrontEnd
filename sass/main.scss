@@ -10,7 +10,6 @@ $green-shade-1: #b3f542;
 $green-shade-2: green;
 $dark-crimson-1: #402929;
 
-
 //https://cssgradient.io/
 .mainframe {
 
@@ -22,15 +21,14 @@ $dark-crimson-1: #402929;
     box-shadow:  0 10px 20px rgba(#000,.8);
     padding-top: 1%;
 
-    // & * {
-    //     box-shadow:  0 10px 20px rgba(#000,.82);
-    //     border-radius: 10px;
-    //     text-align: center;
-    //     padding: 1%;
-    // }
+    [class^="main" ] {
+        box-shadow:  0 10px 20px rgba(#000,.82);
+        border-radius: 10px;
+        text-align: center;
+        padding: 1%;
+    }
 
     &__imageframe {
-
             width:75%;
             height:55%;
             background-color: $green-shade-1;
@@ -42,31 +40,52 @@ $dark-crimson-1: #402929;
             padding-top: 20%;
             width:100%;
             height:100%;
-
         }
 
     }
     .containerButtons {
+        box-shadow:  0 10px 20px rgba(#000,.2);
         margin-top: 10%;
-        background-color: red;
+        background-color: $dark-crimson-1;
         width: 60%;
         height: 20%;    
         
         &__row {
             margin: 0 auto;            
             height: 100%;
-            
-
+            width: 100%;
+            text-align: center;
+           
             &--col {
 
-                &button {
-                    display: block;
-                    background-color:blue;
-                    width: calc((100% - 10px) / 2)
-                }
+                    margin-top: 10%;
+                    // background-color:orange;
+                    width: calc((100% - 30px) / 2);
+                    float: left;
+                    margin-left: 10px;                    
 
-                
-               
+                    & button {
+                        box-shadow:  0 10px 20px rgba(#000,.82);
+                        width: 4rem;
+                        height: 3rem;
+                        border-radius: 10px;
+                        background-color: gold;
+                        transition: all .3s;
+
+                        &:hover {
+                            transform: translateY(-2px);
+                            background-color: crimson;
+                        }
+                        &:focus {
+                            transform: translateY(-2px);
+                            background-color: blue;
+                        }
+
+                    }
+                    & img {                       
+                        width: 43%;
+                        height: 53%;
+                    }               
             }
             
         }
