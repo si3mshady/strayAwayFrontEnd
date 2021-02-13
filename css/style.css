@@ -56,7 +56,22 @@
             background-color: crimson; }
           .mainframe .containerButtons__row--col button:focus {
             transform: translateY(-2px);
-            background-color: blue; }
+            background-color: blue;
+            outline: 0; }
         .mainframe .containerButtons__row--col img {
           width: 43%;
           height: 53%; }
+
+.miniDisplay__container {
+  width: 50%;
+  height: 6rem;
+  background-color: green;
+  margin-top: 5%;
+  padding: 3%; }
+  .miniDisplay__container--output {
+    background-color: #b3f542;
+    width: 90%;
+    height: 90%;
+    color: gold; }
+    .miniDisplay__container--output li {
+      list-style: none; }

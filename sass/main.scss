@@ -79,6 +79,7 @@ $dark-crimson-1: #402929;
                         &:focus {
                             transform: translateY(-2px);
                             background-color: blue;
+                            outline:0;
                         }
 
                     }
@@ -95,6 +96,34 @@ $dark-crimson-1: #402929;
     
 
     
+}
+
+// Lower Display
+
+.miniDisplay {
+
+    &__container {
+        width: 50%;
+        height: 6rem;
+        background-color: $green-shade-2;
+        margin-top: 5%;
+        padding: 3%;
+
+        &--output {
+            
+            background-color: $green-shade-1;
+            width: 90%;
+            height: 90%;
+            color: gold;
+
+            & li {
+                list-style: none;
+            }
+
+        }
+
+    }
+
 }
 
 
