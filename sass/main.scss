@@ -1,14 +1,24 @@
-
+// https://fontawesome.com/icons/directions?style=solid
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     margin: 0 auto;
 }
-
+// Colors
 $green-shade-1: #b3f542;
 $green-shade-2: green;
 $dark-crimson-1: #402929;
+// Grid colors
+$grid-max-width: 100%; // max-width
+$gutter-vertical: 3rem;
+$gutter-horizontal: 2rem;
+
+@mixin clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}
 
 //https://cssgradient.io/
 .mainframe {
@@ -43,70 +53,103 @@ $dark-crimson-1: #402929;
         }
 
     }
-    .containerButtons {
-        box-shadow:  0 10px 20px rgba(#000,.2);
-        margin-top: 10%;
-        background-color: $dark-crimson-1;
-        width: 60%;
-        height: 20%;    
-        
-        &__row {
-            margin: 0 auto;            
-            height: 100%;
-            width: 100%;
-            text-align: center;
-           
-            &--col {
-
-                    margin-top: 10%;
-                    // background-color:orange;
-                    width: calc((100% - 30px) / 2);
-                    float: left;
-                    margin-left: 10px;                    
-
-                    & button {
-                        box-shadow:  0 10px 20px rgba(#000,.82);
-                        width: 4rem;
-                        height: 3rem;
-                        border-radius: 10px;
-                        background-color: gold;
-                        transition: all .3s;
-
-                        &:hover {
-                            transform: translateY(-2px);
-                            background-color: crimson;
-                        }
-                        &:focus {
-                            transform: translateY(-2px);
-                            background-color: blue;
-                            outline:0;
-                        }
-
-                    }
-                    & img {                       
-                        width: 43%;
-                        height: 53%;
-                    }               
-            }
-            
-        }
-    
-    
-    }
     
 
     
+
 }
-
 // Lower Display
+
+
+
+
+
+// USE VH to maintain the better persp
+
+
+
+.containerButtons {
+    box-shadow:  0 10px 20px rgba(#000,.2);
+    margin-top: 10%;           
+    height:19vh;
+    width:55vh;
+    overflow:auto;
+    
+    &__row {
+        margin: 0 auto;        
+        max-width: $grid-max-width;
+        margin-bottom: $gutter-vertical; 
+        
+        @include clearfix;
+       
+        &--col {
+            text-align: center;
+                margin-top: 10%;
+                float: left;                
+                margin-right: 5px;               
+               
+                width: calc((100% - 12px) / 2);
+                
+              
+                
+                              
+                  
+
+
+                
+
+                & button {
+                 
+                    
+                    box-shadow:  0 10px 20px rgba(#000,.82);
+                    width: 15vh;
+                    // height: 1rem;
+                    border-radius: 11px;
+                    cursor: pointer;                     
+                    background-color:rgb(124, 113, 46);
+                    color: greenyellow;
+                    outline:none;
+                    border: none;
+                    
+                    transition: all .3s;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                        background-color: goldenrod;
+                        outline:0;
+                        border: none;
+                    }
+                    &:active {
+                        transform: translateY(-2px);
+                        // background-color: blue;
+                        outline:none;
+                        border: none;
+                    }
+
+                }
+                & img {                       
+                    width: 43%;
+                    height: 53%;
+                }               
+        }
+        
+    }
+
+
+}
 
 .miniDisplay {
 
+    // width: 50%;
+    // height: 6rem;
+
+
+
     &__container {
-        width: 50%;
-        height: 6rem;
+        width: 55vh;
+        height: 100%;
         background-color: $green-shade-2;
-        margin-top: 5%;
+        // margin-top: 5%;
         padding: 3%;
 
         &--output {
@@ -125,6 +168,3 @@ $dark-crimson-1: #402929;
     }
 
 }
-
-
-

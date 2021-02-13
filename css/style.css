@@ -28,45 +28,53 @@
       padding-top: 20%;
       width: 100%;
       height: 100%; }
-  .mainframe .containerButtons {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    margin-top: 10%;
-    background-color: #402929;
-    width: 60%;
-    height: 20%; }
-    .mainframe .containerButtons__row {
-      margin: 0 auto;
-      height: 100%;
-      width: 100%;
-      text-align: center; }
-      .mainframe .containerButtons__row--col {
-        margin-top: 10%;
-        width: calc((100% - 30px) / 2);
-        float: left;
-        margin-left: 10px; }
-        .mainframe .containerButtons__row--col button {
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.82);
-          width: 4rem;
-          height: 3rem;
-          border-radius: 10px;
-          background-color: gold;
-          transition: all .3s; }
-          .mainframe .containerButtons__row--col button:hover {
-            transform: translateY(-2px);
-            background-color: crimson; }
-          .mainframe .containerButtons__row--col button:focus {
-            transform: translateY(-2px);
-            background-color: blue;
-            outline: 0; }
-        .mainframe .containerButtons__row--col img {
-          width: 43%;
-          height: 53%; }
+
+.containerButtons {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 10%;
+  height: 19vh;
+  width: 55vh;
+  overflow: auto; }
+  .containerButtons__row {
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 3rem;
+    content: '';
+    display: table;
+    clear: both; }
+    .containerButtons__row--col {
+      text-align: center;
+      margin-top: 10%;
+      float: left;
+      margin-right: 5px;
+      width: calc((100% - 12px) / 2); }
+      .containerButtons__row--col button {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.82);
+        width: 15vh;
+        border-radius: 11px;
+        cursor: pointer;
+        background-color: #7c712e;
+        color: greenyellow;
+        outline: none;
+        border: none;
+        transition: all .3s; }
+        .containerButtons__row--col button:hover {
+          transform: translateY(-2px);
+          background-color: goldenrod;
+          outline: 0;
+          border: none; }
+        .containerButtons__row--col button:active {
+          transform: translateY(-2px);
+          outline: none;
+          border: none; }
+      .containerButtons__row--col img {
+        width: 43%;
+        height: 53%; }
 
 .miniDisplay__container {
-  width: 50%;
-  height: 6rem;
+  width: 55vh;
+  height: 100%;
   background-color: green;
-  margin-top: 5%;
   padding: 3%; }
   .miniDisplay__container--output {
     background-color: #b3f542;
