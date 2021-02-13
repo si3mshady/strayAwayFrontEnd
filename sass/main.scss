@@ -140,14 +140,14 @@ $gutter-horizontal: 2rem;
 
 .miniDisplay {
 
-    // width: 50%;
-    // height: 6rem;
+    width: 50%;    width: 40vh;    width: 40vh;
+    height: 6rem;
 
 
 
     &__container {
-        width: 55vh;
-        height: 100%;
+        // width: 40vh;
+        // height: 94%;
         background-color: $green-shade-2;
         // margin-top: 5%;
         padding: 3%;
