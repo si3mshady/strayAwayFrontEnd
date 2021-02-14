@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8ca840658a.js" crossorigin="anonymous"></script>    
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stray Away</title>
   
@@ -14,9 +20,9 @@
         <div class="mainframe__imageframe">
                 
 
-            <div class="mainframe__imageframe--img">
+            <div class="mainframe__imageframe--image">
 
-                <!-- inner img                 -->
+                <img className="thumbnail-gen" src="./img/tld.png" id="img" alt=""/>  
             </div>
         </div>
 
@@ -24,26 +30,74 @@
                 <div class="containerButtons__row">
 
                     <div class="containerButtons__row--col">
-                        <button>
-                            <img src="./img/placeholder.png"
+                        <button onClick="functionProxyClick()">
+                            
+                            click
+
+                            <form  action="#" id="form" encType="multipart/form-data">
+                                <input hidden  onClick="getImage()" 
+                                type="file" id="camera" accept="image/*" capture />
+                                </form>
+                         
+                        
                         </button>
-                        <!-- text -->
+<!-- 
+                        <form  action="#" id="form" encType="multipart/form-data">
+                            <input hidden  onClick="getImage()" 
+                            type="file" id="camera" accept="image/*" capture />
+                            </form> -->
+                     
 
                     </div>
 
-                    <div class="containerButtons__row--col">
-                        <button><img src="./img/photo-camera-interface-symbol-for-button.png"</button>
-                        <!-- text -->
-
+                    <!-- <div class="containerButtons__row--col">
+                        <button>
+                            <i class="fas fa-directions fa-2x"></i></button>
+                        
+                       
                     </div>
-
-                    <!-- NEED A DIV HERE TO OUTPUT coordinates! -->
+                     -->
 
 
                 </div>
+            </div>
+             <div class="miniDisplay">
+                <div class="miniDisplay__container">
+                    
+                     <div class="miniDisplay__container--output">
+                       
+                       <p>Data</p>
+
+                    </div>
+                </div> 
             </div>
         </div>
     </div>
     
 </body>
+<script>
+  
+
+    function functionProxyClick() {
+        fileInput = document.querySelector("input");
+        console.log(fileInput)
+        fileInput.click();      
+
+    }; 
+
+    function getImage(event) {
+        $("#camera").on("change", (event) => {
+            if (event.target.files[0] !== null) {                
+                const image = document.getElementById("img")
+                img.src = ''
+                image.src = window.URL.createObjectURL(event.target.files[0]) 
+                }  } ) }
+
+    
+   
+    
+
+
+
+</script>
 </html>
