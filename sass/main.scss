@@ -84,11 +84,11 @@ img {
 
 
 .containerButtons {
-    box-shadow:  0 10px 20px rgba(#000,.2);
-    margin-top: 10%;           
-    height:19vh;
-    width:55vh;
-    overflow:auto;
+    // box-shadow:  0 10px 20px rgba(#000,.8);
+    margin-top: 10%;
+    height: 33vh;
+    width: 55vh;
+    overflow: auto;
     
     &__row {
         margin: 0 auto;        
@@ -122,6 +122,8 @@ img {
                     cursor: pointer;                     
                     background-color:rgb(124, 113, 46);
                     color: greenyellow;
+
+                    
                     
                     
                     transition: all .3s;
@@ -156,13 +158,16 @@ img {
 
 .miniDisplay {
 
-    width: 50%;  
+    width: 70%;
     height: 6rem;
 
 
 
     &__container {
+        opacity: .6;
         box-shadow:  0 10px 20px rgba(#000,.82);
+        transform: scale3d(1.2, 1.2, 1.2);
+        border-radius: 2px;
         margin: 0 auto;
         // width: 40vh;
         // height: 94%;
@@ -172,9 +177,11 @@ img {
         // padding: 3%;
 
         &--output {
+            
             box-shadow:  0 10px 20px rgba(#000,.82);
+            transform: scale3d(.8, .8, .8);
             margin: 0 auto;
-            // border-radius: 50px;            
+            border-radius: 2px;            
             background-color: $green-shade-1;
             transform: scale(.8);
             width: 90%;
@@ -182,6 +189,7 @@ img {
             color: rgb(77, 68, 23);
 
             & p {
+                
                 padding: 14px;
                 margin: 12px;
                
